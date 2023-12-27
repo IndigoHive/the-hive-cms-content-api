@@ -1,5 +1,6 @@
 # The Hive CMS: Content API
 
+[![.github/workflows/tests.yml](https://github.com/IndigoHive/the-hive-cms-content-api/actions/workflows/tests.yml/badge.svg)](https://github.com/IndigoHive/the-hive-cms-content-api/actions/workflows/tests.yml)
 ![NPM](https://img.shields.io/npm/l/%40thehive%2Fcms-content-api)
 ![npm](https://img.shields.io/npm/v/%40thehive%2Fcms-content-api)
 ![npm](https://img.shields.io/npm/dw/%40thehive%2Fcms-content-api)
