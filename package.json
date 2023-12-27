@@ -10,6 +10,7 @@
     "build": "tsc",
     "prebuild": "rimraf dist",
     "lint": "eslint src --ext .ts",
+    "test": "vitest",
     "prepublish": "npm run build"
   },
   "keywords": [],
@@ -27,6 +28,7 @@
     "eslint-plugin-n": "^16.5.0",
     "eslint-plugin-promise": "^6.1.1",
     "rimraf": "^5.0.5",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
   }
 }
