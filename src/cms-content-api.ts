@@ -1,9 +1,10 @@
-import axios, { AxiosInstance } from 'axios'
+import axios from 'axios'
+import type { AxiosInstance } from 'axios'
 import qs from 'qs'
 import { ContentsClient } from './clients/content'
 import { PostsClient } from './clients/posts'
 import { TagsClient } from './clients/tags'
-import { BaseClientOptions } from './base-client'
+import type { BaseClientOptions } from './base-client'
 
 export type CmsContentApiOptions = {
   apiKey?: string
@@ -21,7 +22,7 @@ export type CmsContentApiOptions = {
 }
 
 export class CmsContentApi {
-  private axios: AxiosInstance
+  private readonly axios: AxiosInstance
 
   content: ContentsClient
   posts: PostsClient
@@ -33,7 +34,7 @@ export class CmsContentApi {
     this.axios = axios.create({
       baseURL: `https://cms-api.indigohive.com.br/content/${organization}/${space}/${environment}`,
       withCredentials: true,
-      paramsSerializer: (params) => qs.stringify(params, { arrayFormat: "repeat" }),
+      paramsSerializer: (params) => qs.stringify(params, { arrayFormat: 'repeat' }),
       headers: {
         'Api-Key': apiKey
       }
@@ -59,7 +60,7 @@ export class CmsContentApi {
   }
 
   isNetworkError (error: unknown): boolean {
-    return axios.isAxiosError(error) && !error.response
+    return axios.isAxiosError(error) && error.response === undefined
   }
 
   isNotFound (error: unknown): boolean {
@@ -70,22 +71,22 @@ export class CmsContentApi {
     return axios.isAxiosError(error) && error.response?.status === 401
   }
 
-  private setupDevMode (devMode: CmsContentApiOptions['devMode']) {
-    if (devMode?.request?.delay) {
+  private setupDevMode (devMode: CmsContentApiOptions['devMode']): void {
+    if (devMode?.request?.delay !== undefined) {
       this.axios.interceptors.request.use((config) => {
         return new Promise((resolve) => {
           if (devMode.request?.delay !== Infinity) {
-            setTimeout(() => resolve(config), devMode.request!.delay)
+            setTimeout(() => { resolve(config) }, devMode.request?.delay)
           }
         })
       })
     }
 
-    if (devMode?.response?.delay) {
+    if (devMode?.response?.delay !== undefined) {
       this.axios.interceptors.response.use((response) => {
         return new Promise((resolve) => {
           if (devMode.response?.delay !== Infinity) {
-            setTimeout(() => resolve(response), devMode.response!.delay)
+            setTimeout(() => { resolve(response) }, devMode.response?.delay)
           }
         })
       })

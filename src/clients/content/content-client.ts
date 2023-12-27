@@ -1,6 +1,6 @@
 import { BaseClient } from '../../base-client'
-import { Page } from '../../types'
-import { GetContentsPageQuery } from './types'
+import type { Page } from '../../types'
+import type { GetContentsPageQuery } from './types'
 
 export class ContentsClient extends BaseClient {
   async getPage<T> (

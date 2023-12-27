@@ -1,6 +1,6 @@
 import { BaseClient } from '../../base-client'
-import { Page } from '../../types'
-import {
+import type { Page } from '../../types'
+import type {
   GetPostResult,
   GetPostsPageQuery,
   GetPostsPageResult,
@@ -8,25 +8,25 @@ import {
 } from './types'
 
 export class PostsClient extends BaseClient {
-  async getPage(
+  async getPage (
     params: GetPostsPageQuery = {},
     signal?: AbortSignal
   ): Promise<Page<GetPostsPageResult>> {
-    return (await this.axios.get(`/posts`, { params, signal })).data
+    return (await this.axios.get('/posts', { params, signal })).data
   }
 
-  async getById(
+  async getById (
     postId: string,
     signal?: AbortSignal
   ): Promise<GetPostResult> {
-    return (await this.axios.get(`/posts/${postId}`, { signal, })).data
+    return (await this.axios.get(`/posts/${postId}`, { signal })).data
   }
 
-  async getBySlug(
+  async getBySlug (
     slug: string,
     signal?: AbortSignal
   ): Promise<GetPostResult> {
-    return (await this.axios.get(`/posts/slug/${slug}`, { signal, })).data
+    return (await this.axios.get(`/posts/slug/${slug}`, { signal })).data
   }
 
   async view (

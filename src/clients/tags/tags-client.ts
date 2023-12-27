@@ -1,6 +1,6 @@
 import { BaseClient } from '../../base-client'
-import { Page } from '../../types'
-import { GetTagResult, GetTagsPageQuery } from './types'
+import type { Page } from '../../types'
+import type { GetTagResult, GetTagsPageQuery } from './types'
 
 export class TagsClient extends BaseClient {
   async getPage (

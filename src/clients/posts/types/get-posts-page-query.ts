@@ -1,4 +1,4 @@
-import { Pagination } from '../../../types'
+import type { Pagination } from '../../../types'
 
 export type GetPostsPageQuery = Pagination & {
   tag?: string
