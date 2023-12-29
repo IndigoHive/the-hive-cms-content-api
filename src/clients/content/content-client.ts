@@ -11,6 +11,14 @@ export class ContentsClient extends BaseClient {
     return (await this.axios.get(type, { params, signal })).data
   }
 
+  async getById<T> (
+    type: string,
+    id: string,
+    signal?: AbortSignal
+  ): Promise<T> {
+    return (await this.axios.get(`${type}/${id}`, { signal })).data
+  }
+
   async getByUniqueField<T> (
     type: string,
     field: string,
