@@ -32,6 +32,7 @@ contentApi.content.getPage<MyContentResult>(
   'type',
   { pageNumber: 0, pageSize: 10 }
 )
+contentApi.content.getById<MyContentResult>('type', entryId)
 contentApi.content.getByUniqueField<MyContentResult>('type', 'field', value)
 
 // Posts
