@@ -18,4 +18,8 @@ export type GetPostsPageResult = {
   media: {
     url?: string | null
   }
+  thumbnail: {
+    url?: string | null
+  }
+  data: any
 }
