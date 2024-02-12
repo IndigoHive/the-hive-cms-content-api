@@ -5,4 +5,6 @@ export type GetPostsPageQuery = Pagination & {
   tags?: string[]
   postType?: string
   postTypes?: string[]
+  contentContains?: string
+  includeData?: boolean
 }
