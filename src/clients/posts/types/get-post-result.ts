@@ -6,6 +6,11 @@ export type GetPostResult = {
   content: string | null
   externalUrl: string | null
   viewsCount: number
+  type: {
+    id: string
+    name: string
+    slug: string
+  }
   updatedAt: string
   publishedAt: string
   tags: string[]
