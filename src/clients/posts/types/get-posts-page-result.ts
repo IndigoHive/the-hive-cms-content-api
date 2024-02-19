@@ -5,6 +5,11 @@ export type GetPostsPageResult = {
   description: string | null
   externalUrl: string | null
   viewsCount: number
+  type: {
+    id: string
+    name: string
+    slug: string
+  }
   updatedAt: string
   publishedAt: string
   tags: {
