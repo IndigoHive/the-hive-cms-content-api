@@ -10,7 +10,7 @@ export type GetPostResult = {
     id: string
     name: string
     slug: string
-  }
+  } | null
   updatedAt: string
   publishedAt: string
   tags: string[]
