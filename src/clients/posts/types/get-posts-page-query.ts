@@ -6,5 +6,6 @@ export type GetPostsPageQuery = Pagination & {
   postType?: string
   postTypes?: string[]
   contentContains?: string
+  titleContains?: string
   includeData?: boolean
 }
