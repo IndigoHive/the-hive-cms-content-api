@@ -13,7 +13,11 @@ export type GetPostResult = {
   } | null
   updatedAt: string
   publishedAt: string
-  tags: string[]
+  tags: {
+    id: string
+    name: string
+    slug: string
+  }[]
   cover: {
     url?: string | null
   }
