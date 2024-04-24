@@ -19,12 +19,15 @@ export type GetPostsPageResult = {
   }[]
   cover: {
     url?: string | null
+    caption?: string | null
   }
   media: {
     url?: string | null
+    caption?: string | null
   }
   thumbnail: {
     url?: string | null
+    caption?: string | null
   }
   data: any
 }
