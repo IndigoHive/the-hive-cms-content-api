@@ -30,4 +30,5 @@ export type GetPostsPageResult = {
     caption?: string | null
   }
   data: any
+  relevance: number
 }
