@@ -31,4 +31,5 @@ export type GetPostResult = {
     caption?: string | null
   }
   data: any
+  relevance: number
 }
