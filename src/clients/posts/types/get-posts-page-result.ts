@@ -4,6 +4,7 @@ export type GetPostsPageResult = {
   slug: string | null
   description: string | null
   externalUrl: string | null
+  externalUrls: string[] | null
   viewsCount: number
   type: {
     id: string

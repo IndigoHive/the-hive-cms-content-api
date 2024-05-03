@@ -5,6 +5,7 @@ export type GetPostResult = {
   description: string | null
   content: string | null
   externalUrl: string | null
+  externalUrls: string[] | null
   viewsCount: number
   type: {
     id: string
