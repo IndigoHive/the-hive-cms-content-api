@@ -20,7 +20,7 @@ export class PostsClient extends BaseClient {
   async getScores (
     params?: GetPostScoresQuery,
     signal?: AbortSignal
-  ): Promise<GetPostScoresResult> {
+  ): Promise<GetPostScoresResult[]> {
     return (await this.axios.get('/posts/scores', { params, signal })).data
   }
 
