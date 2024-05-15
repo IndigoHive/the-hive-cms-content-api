@@ -1,6 +1,6 @@
 export type GetPostScoresResult = {
-  Id: string
-  PublishedAt: string
-  Relevance: number
-  Score: number
+  id: string
+  publishedAt: string
+  relevance: number
+  score: number
 }
