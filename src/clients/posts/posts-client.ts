@@ -4,6 +4,8 @@ import type {
   GetPostResult,
   GetPostScoresQuery,
   GetPostScoresResult,
+  GetPostsPageByScoreQuery,
+  GetPostsPageByScoreResult,
   GetPostsPageQuery,
   GetPostsPageResult,
   PublishPostViewedCommand
@@ -15,6 +17,12 @@ export class PostsClient extends BaseClient {
     signal?: AbortSignal
   ): Promise<Page<GetPostsPageResult>> {
     return (await this.axios.get('/posts', { params, signal })).data
+  }
+
+  async getPageByScore (
+    params?: GetPostsPageByScoreQuery
+  ): Promise<Page<GetPostsPageByScoreResult>> {
+    return (await this.axios.get('/ordered-by-score', { params })).data
   }
 
   async getScores (
