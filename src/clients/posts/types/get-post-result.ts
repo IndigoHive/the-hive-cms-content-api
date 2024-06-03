@@ -33,4 +33,5 @@ export type GetPostResult = {
   }
   data: any
   relevance: number
+  score: number
 }
