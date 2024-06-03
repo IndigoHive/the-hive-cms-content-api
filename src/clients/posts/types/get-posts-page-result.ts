@@ -32,4 +32,5 @@ export type GetPostsPageResult = {
   }
   data: any
   relevance: number
+  score: number
 }
