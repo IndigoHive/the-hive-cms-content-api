@@ -20,7 +20,7 @@ export class PostsClient extends BaseClient {
   }
 
   async getPageByScore (
-    params?: GetPostsPageByScoreQuery
+    params: GetPostsPageByScoreQuery = {}
   ): Promise<Page<GetPostsPageByScoreResult>> {
     return (await this.axios.get('/ordered-by-score', { params })).data
   }
