@@ -1,5 +1,6 @@
 export type GetPostsPageResult = {
   id: string
+  publishedVersionId: string
   title: string | null
   slug: string | null
   description: string | null
