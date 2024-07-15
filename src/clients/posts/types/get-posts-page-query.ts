@@ -9,7 +9,7 @@ export type GetPostsPageQuery = Pagination & {
   contentContains?: string
   titleContains?: string
   includeData?: boolean
-  orderBy?: 'MostViewed' | 'MostRelevant' | 'Score'
+  orderBy?: 'MostViewed' | 'MostRelevant' | 'Score' | 'Order'
   PublishedAfter?: Date
   PublishedBefore?: Date
 }
