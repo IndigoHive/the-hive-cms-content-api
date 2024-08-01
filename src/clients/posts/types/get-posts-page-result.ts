@@ -33,5 +33,6 @@ export type GetPostsPageResult = {
   }
   data: any
   relevance: number
+  isSponsored: boolean
   score: number
 }
