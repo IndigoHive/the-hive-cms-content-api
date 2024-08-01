@@ -1,6 +1,6 @@
 {
   "name": "@thehive/cms-content-api",
-  "version": "0.12.7",
+  "version": "0.12.8",
   "description": "HTTP Client for The Hive CMS Content API",
   "main": "dist/index.js",
   "repository": {
